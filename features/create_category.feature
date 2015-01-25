@@ -2,8 +2,11 @@ Feature: Create Category
 	As an Admin
 	In order to organize the Blog
 	I want to Create a Category
+  
+  	Background:
+    	Given the blog is set up
+    	And I am logged into the admin panel
 
 	Scenario:
-		Given I am on the Home Page
-		When I click "Category"
-		Then I should see the "New Category Page" 
+		When I follow "Categories"
+		Then I should be on the "New Category Page" 

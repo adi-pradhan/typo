@@ -46,7 +46,7 @@ end
 And /^I am logged into the admin panel$/ do
   visit '/accounts/login'
   fill_in 'user_login', :with => 'admin'
-  fill_in 'user_password', :with => 'aaaaaaaa'
+  fill_in 'user_password', :with => '0ofrCKh'
   click_button 'Login'
   if page.respond_to? :should
     page.should have_content('Login successful')
