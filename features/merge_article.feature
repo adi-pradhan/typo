@@ -8,19 +8,19 @@ Feature: Merge Articles
 		Given the blog is set up
 
 		Given the following users exist:
-		| profile_id | login | name   | password | email    | state  |
-		| 2			 | user2 | two    | password | t@t.com  | active |
-		| 3			 | user3 | three  | password | t@t.com  | active |
+		  | profile_id   | login | name   | password | email    | state  |
+		  | 2			 | user2 | two    | password | t@t.com  | active |
+		  | 3			 | user3 | three  | password | t@t.com  | active |
 
 		Given the following articles exist:
             | id | title    | author | user_id | body     | allow_comments | published | published_at        | state     | type    |
-            | 3  | Article1 | user2 | 2       | Content1 | true           | true      | 2012-23-11 21:30:00 | published | Article |
-            | 4  | Article2 | user3 | 3       | Content2 | true           | true      | 2012-24-11 22:00:00 | published | Article |
+            | 3  | Article1 | user2 | 2        | Content1 | true           | true      | 2012-23-11 21:30:00 | published | Article |
+            | 4  | Article2 | user3 | 3        | Content2 | true           | true      | 2012-24-11 22:00:00 | published | Article |
 
         Given the following comments exist:
             | id | type    | author | body     | article_id | user_id | created_at          |
-            | 1  | Comment | user2 | Comment1 | 3          | 2       | 2012-23-11 21:31:00 |
-            | 2  | Comment | user2 | Comment2 | 4          | 2       | 2012-24-11 22:01:00 |
+            | 1  | Comment | user2 | Comment1  | 3          | 2       | 2012-23-11 21:31:00 |
+            | 2  | Comment | user2 | Comment2  | 4          | 2       | 2012-24-11 22:01:00 |
 
     Scenario: As a non-admin I cannot merge articles
     	Given I am logged in as "user2" with pass "password"

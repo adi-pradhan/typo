@@ -87,7 +87,7 @@ class Article < Content
     end
 
     self.body = self.body + "\n" + other_article.body
-    self.comments << other_article.comments
+    self.comments << Comment.find_by_article_id(other_article_id)
     self.save!
     other_article.destroy
     return true
