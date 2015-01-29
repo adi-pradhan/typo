@@ -46,8 +46,8 @@ Feature: Merge Articles
 
     Scenario: The author of the merged articles is the first author
     	Given the articles with id "3" and "4" were merged
-    	Then "User1" should be the author of 1 articles
-    	And "User2" should be the author of 0 articles
+    	Then "user2" should be the author of 1 articles
+    	And "user3" should be the author of 0 articles
 
     Scenario: The comments of merged articles should be combined
     	Given the articles with id "3" and "4" were merged

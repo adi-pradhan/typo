@@ -33,5 +33,5 @@ Given /^the articles with id "(.*?)" and "(.*?)" were merged$/ do |id1, id2|
 end
 
 Then /^"(.*?)" should be the author of (\d+) articles$/ do |user, articles|
-  assert Article.find_all_by_author(User.find_name(user).login).size == Integer(articles)
+  assert Article.find_all_by_author(User.find_by_name(user).login).size == Integer(articles)
 end
